@@ -24,7 +24,7 @@ This class takes a PEAR::DB-Result Object, a sql-query-string, an
 array and/or an xml-string/file and returns a xml-representation of
 it.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Ta klasa pobiera obiekt PEAR::DB-Result oraz tekst zapytania SQL.
