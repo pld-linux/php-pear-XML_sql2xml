@@ -18,12 +18,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This class takes a PEAR::DB-Result Object, a sql-query-string, an
-array and/or an xml-string/file and returns a xml-representation
-of it.
+array and/or an xml-string/file and returns a xml-representation of
+it.
 
 %description -l pl
-%{_pearname} - Konwertuje SQL-Query ma format XML
-
 Ta klasa pobiera obiekt PEAR::DB-Result oraz tekst zapytania SQL.
 Zwraca jego reprezentacje XML.
 
