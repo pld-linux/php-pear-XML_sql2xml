@@ -1,9 +1,10 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          XML
-%define         _subclass       sql2xml
+%define		_class		XML
+%define		_subclass	sql2xml
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_pearname} - Returns XML from a SQL-Query
-Summary(pl):	%{_pearname} - Konwertuje SQL-Query ma format XML
+
+Summary:	%{_pearname} - returns XML from a SQL-query
+Summary(pl):	%{_pearname} - konwersja zapytañ SQL ma format XML
 Name:		php-pear-%{_pearname}
 Version:	0.3.1
 Release:	1
