@@ -1,6 +1,7 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		XML
 %define		_subclass	sql2xml
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - returns XML from a SQL-query
@@ -10,8 +11,8 @@ Version:	0.3.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-# Source0-md5:	c5eafb99d18250acfb9c8f075cc25cbc
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	c5eafb99d18250acfb9c8f075cc25cbc
 URL:		http://pear.php.net/package/XML_sql2xml/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -23,9 +24,13 @@ This class takes a PEAR::DB-Result Object, a sql-query-string, an
 array and/or an xml-string/file and returns a xml-representation of
 it.
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 Ta klasa pobiera obiekt PEAR::DB-Result oraz tekst zapytania SQL.
 Zwraca jego reprezentacje XML.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
