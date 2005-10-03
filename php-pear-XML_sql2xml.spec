@@ -8,7 +8,7 @@ Summary:	%{_pearname} - returns XML from a SQL-query
 Summary(pl):	%{_pearname} - konwersja zapytañ SQL ma format XML
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
-Release:	2.2
+Release:	2.4
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 #Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -16,6 +16,7 @@ Source0:	%{_pearname}-%{version}.tgz
 # Source0-md5:	7b5e24e7b5cec429ef9ffaaa91043990
 URL:		http://pear.php.net/package/XML_sql2xml/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-common < 3:5
 Requires:	php-pear
 Requires:	php-domxml
 BuildArch:	noarch
