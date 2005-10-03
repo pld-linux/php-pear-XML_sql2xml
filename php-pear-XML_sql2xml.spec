@@ -8,14 +8,16 @@ Summary:	%{_pearname} - returns XML from a SQL-query
 Summary(pl):	%{_pearname} - konwersja zapytañ SQL ma format XML
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
-Release:	2
+Release:	2.2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	65a70de6d53141ae1a50404e85421a6c
+#Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+Source0:	%{_pearname}-%{version}.tgz
+# Source0-md5:	7b5e24e7b5cec429ef9ffaaa91043990
 URL:		http://pear.php.net/package/XML_sql2xml/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
+Requires:	php-domxml
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,19 +35,19 @@ Zwraca jego reprezentacje XML.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-
-install %{_pearname}-%{version}/%{_subclass}.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/doc/*
-%doc %{_pearname}-%{version}/%{_subclass}_ext.php
-%{php_pear_dir}/%{_class}/%{_subclass}.php
+%doc install.log
+%doc docs/%{_pearname}/doc/*
+%{php_pear_dir}/.registry/*.reg
+%{php_pear_dir}/%{_class}/*.php
