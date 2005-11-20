@@ -3,12 +3,11 @@
 %define		_subclass	sql2xml
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - returns XML from a SQL-query
 Summary(pl):	%{_pearname} - konwersja zapytañ SQL ma format XML
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
-Release:	3
+Release:	4
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 #Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
