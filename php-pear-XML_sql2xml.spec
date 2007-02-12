@@ -4,7 +4,7 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - returns XML from a SQL-query
-Summary(pl):	%{_pearname} - konwersja zapytañ SQL ma format XML
+Summary(pl.UTF-8):   %{_pearname} - konwersja zapytaÅ„ SQL ma format XML
 Name:		php-pear-%{_pearname}
 Version:	0.3.2
 Release:	5
@@ -30,7 +30,7 @@ it.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Ta klasa pobiera obiekt PEAR::DB-Result oraz tekst zapytania SQL.
 Zwraca jego reprezentacje XML.
 
